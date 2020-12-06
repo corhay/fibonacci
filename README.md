@@ -1,12 +1,24 @@
-# The Fibonnaci Series
-Vue SPA allowing to calculate the first 1450 values of the infamous Fibonnaci series.
+# The Fibonacci Series
 
-Created with Vue3, TailwindCSS and GreenSock Animation Platform.
+Vue SPA allowing to calculate the first 1450 values of the infamous Fibonacci series.
 
+  
+
+Created with PHP, Vue3, TailwindCSS and GreenSock Animation Platform.
+
+  
 ## Build Setup
 
-install dependencies:
+  
+
+### client side:
+-install dependencies:
 <code>npm install</code>
 
-run development server:
-<code>npm run dev</code>
+-run build:
+<code>npm run build</code>
+
+place contents of dist folder at the root of www folder.
+
+### server side:
+place server folder at root of www folder
