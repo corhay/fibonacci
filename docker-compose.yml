@@ -1,0 +1,29 @@
+services:
+  php:
+    build:
+      context: .
+      dockerfile: docker/server.Dockerfile
+    volumes:
+      - ./server:/var/www/html
+    ports:
+      - "3000:80"
+    environment:
+      - APP_ENV=local
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/client.Dockerfile
+      args:
+        - VITE_API_BASE_URL=http://localhost:3000 # set to php exposed port
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
